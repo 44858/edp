@@ -7,7 +7,7 @@ class NameWidget(QWidget):
         super().__init__()
         self.username = QLineEdit()
         self.label = QLabel("Please enter your name: ")
-        self.submit =  QPushButton("Submit")
+        self.submit = QPushButton("Submit")
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.label)
         self.layout.addWidget(self.username)
