@@ -12,7 +12,7 @@ class MyWindow(QMainWindow):
         self.hello_widget = HelloWidget()
         self.setCentralWidget(self.name_widget)
         self.name_widget.NameEntered.connect(self.name_provided)
-        self.hello_widget.Back.connect(self.back_pressed)
+        self.hello_widget.BackPressed.connect(self.back_pressed)
 
         self.hello_widget = HelloWidget()
         self.stack = QStackedLayout()
@@ -27,10 +27,12 @@ class MyWindow(QMainWindow):
         self.stack.setCurrentIndex(1)
         name = self.name_widget.username.text()
         self.hello_widget.message.setText(name)
+        self.hello_widget.BackPressed.connect(self.back_pressed)
 
     def back_pressed(self):
         self.stack.setCurrentIndex(0)
-        self 
+        
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

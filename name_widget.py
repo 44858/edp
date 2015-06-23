@@ -17,7 +17,6 @@ class NameWidget(QWidget):
 
     def submit_pushed(self):
         name = self.username.text()
-        print(name)
         self.NameEntered.emit()
        
  
